@@ -1,0 +1,28 @@
+- if notice
+  p id="notice" = notice
+end
+
+h1 Listing products
+
+table
+    - @products.each do |product|
+      tr class= (cycle('list_line_odd', 'list_line_even'))
+        td
+          = image_tag(product.image_url, class: 'list_image')
+        td class="list_discription"
+          dl calss="text_des"
+            dt = product.title
+            dd = truncate(strip_tags(product.description), length: 80)
+
+        td class="list_actions"
+          = link_to 'Show', product_path(product)
+          = link_to 'Edit', edit_product_path(product)
+          = link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }
+          // = button_to 'Add to Cart', line_items_path(product_id: product)
+
+    end
+
+
+
+
+= link_to 'New Product', new_product_path

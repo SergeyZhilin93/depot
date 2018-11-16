@@ -1,0 +1,10 @@
+- if notice
+  p#notice = notice
+.product-container
+    p = @product.title
+    p = @product.description
+    = image_tag @product.image_url
+    p = @product.price
+
+= link_to 'Edit', edit_product_path(@product)
+= link_to 'Back', products_path

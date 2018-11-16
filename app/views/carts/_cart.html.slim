@@ -1,0 +1,10 @@
+- unless cart.line_items.empty?
+  .cont
+    .cont__title = t('.title')
+    = render(cart.line_items)
+
+    .line-items__total
+      p.total_line__title Total
+      p.total_line__value = number_to_currency(cart.total_price)
+  = button_to t('.checkout'), new_order_path, method: :get
+  = button_to t('.empty'), cart, method: :delete, confirm: 'Are you sure?'

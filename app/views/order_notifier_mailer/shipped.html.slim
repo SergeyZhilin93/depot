@@ -1,0 +1,9 @@
+h3 Заказ из Pragmatic Order отправлен
+
+p Это сообщение уведомляет Вас, что мы отправили ваш недавний заказ:
+
+.msg-text
+  tr
+    p.msg-text__num К-во
+    p.msg-text__des Описание
+  = render @order.line_items
