@@ -3,8 +3,8 @@ en:
     application:
       title: "Pragmatic BookShelf"
       home: "Home"
-      questions: "Questions"
-      news: "News"
+      registration: "Registration"
+      login: "Login"
       contact: "Contact"
 
   store:

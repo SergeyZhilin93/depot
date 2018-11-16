@@ -22,10 +22,10 @@ html
           = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
             = render @cart
         ul
-          li = link_to t('.home'), "http://localhost:3000"
-          li = link_to t('.questions'), "http://localhost:3000/carts"
-          li = link_to t('.news'), "http://www..."
-          li = link_to t('.contact'), "http://www..."
+          li = link_to t('.home'), store_path
+          li = link_to t('.registration'), new_user_path
+          li = link_to t('.login'), login_path
+          li = link_to t('.contact'), "#"
 
         - if session[:user_id]
           ul

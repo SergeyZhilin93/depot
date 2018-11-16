@@ -3,8 +3,8 @@ es:
     application:
       title: "Publicaciones de Pragmatic"
       home: "Inicio"
-      questions: "Preguntas"
-      news: "Noticias"
+      registration: "Registro"
+      login: "Iniciar sesión"
       contact: "Contacto"
 
   store:
